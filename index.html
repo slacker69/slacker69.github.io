@@ -11,10 +11,26 @@
 <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/vader/jquery-ui.css" integrity="sha512-VZni17s1qANaFXg6lVWIN3ImcA5SYA/moYA9NJlyO64reo1U8EHIKAPvBeS8loGLaFIKVtRR91pbAInrRXfsJw==" crossorigin="anonymous">
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha512-iqRdf+0KMFmNZgdsA+8bz1MWIIXQBUCavPYVSVI83fcVfH2Y2PnNooLN04bgTNoUiQvIzidiIHJAcIP/uAEV9w==" crossorigin="anonymous">
 <style>
+html, body {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+#tab-container {position:relative; min-height:100%;}
+#main_body {
+    position: absolute;
+    top: 0;
+    bottom:0;
+    left: 0;
+    right: 0;
+}
+#fragment-1 {
+    background: green;
+}
 </style>
 <script>
 $(document).ready(function(){
-  $("#main_body").tabs({heightStyle: "fill"});
+  $("#main_body").tabs();
 });
 </script>
 </head>
@@ -27,7 +43,7 @@ $(document).ready(function(){
   </ul>
   <div id="fragment-1">
     <p>First tab is active by default:</p>
-    <pre><code>$( "#tabs" ).tabs(); </code></pre>
+    <pre><code>$( "#main_body" ).tabs(); </code></pre>
   </div>
   <div id="fragment-2">
     Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.
